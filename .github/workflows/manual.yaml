@@ -4,8 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       greeting:
-        type: string
-        default: Hello
+        type: choice 
+        options:
+          - Hello
+          - Hi
+          - Good Afternoon
         required: true
         description: A cheerful word
 
