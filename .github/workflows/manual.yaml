@@ -16,4 +16,5 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "${{github.actor}}"
       - run: echo "${{inputs.greeting}}"
