@@ -9,8 +9,8 @@ on:
         required: true
         description: A cheerful word
 
-  jobs:
-    run:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "${{inputs.greeting}}"
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{inputs.greeting}}"
