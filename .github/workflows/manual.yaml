@@ -14,6 +14,7 @@ on:
 
 env:
   BRANCH: main
+  ANIMAL: ${{vars.ANIMAL}}
 
 jobs:
   printenv:
@@ -23,4 +24,5 @@ jobs:
     steps:
       - run: echo "$BRANCH"
       - run: echo "$ACTOR"
+      - run: echo "$ANIMAL"
       - run: echo "${{inputs.greeting}}"
