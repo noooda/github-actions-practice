@@ -12,9 +12,15 @@ on:
         required: true
         description: A cheerful word
 
+env:
+  BRANCH: main
+
 jobs:
-  run:
+  printenv:
     runs-on: ubuntu-latest
+    env:
+      ACTOR: ${{github.actor}}
     steps:
-      - run: echo "${{github.actor}}"
+      - run: echo "$BRANCH"
+      - run: echo "$ACTOR"
       - run: echo "${{inputs.greeting}}"
