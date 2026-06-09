@@ -15,6 +15,7 @@ on:
 env:
   BRANCH: main
   ANIMAL: ${{vars.ANIMAL}}
+  IMPORTANT_PASSWORD: ${{secrets.IMPORTANT_PASSWORD}}
 
 jobs:
   printenv:
@@ -25,4 +26,5 @@ jobs:
       - run: echo "$BRANCH"
       - run: echo "$ACTOR"
       - run: echo "$ANIMAL"
+      - run: echo "$IMPORTANT_PASSWORD"
       - run: echo "${{inputs.greeting}}"
