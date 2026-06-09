@@ -28,5 +28,5 @@ jobs:
       - run: echo "$ANIMAL"
       - run: echo "$IMPORTANT_PASSWORD"
       - run: echo "${{inputs.greeting}}"
-      - rnn: echo "${{`Right!!!!!!!!!!`}}"
+      - run: echo "${{`Right!!!!!!!!!!`}}"
         if: ${{10 == 10}}
