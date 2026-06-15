@@ -6,7 +6,8 @@ on:
 jobs:
   printenv:
     runs-on: ubuntu-latest
+    env:
+      password: SuperSecretPassword
     steps:
-      - run: exit 1
-      - run: echo "Hello"
-        if: ${{failure()}}
+      - run: echo "::add-mask::${password}"
+      - run: echo "${password}"
